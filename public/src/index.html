@@ -1,18 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/pages.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/theme.css">
-    <script src="https://kit.fontawesome.com/7f51f8a9fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/pages.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <script
+      src="https://kit.fontawesome.com/7f51f8a9fe.js"
+      crossorigin="anonymous"
+    ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
-    <h1>TESTING</h1>
+    <main class="site-wrapper">
+      <!-- Header -->
+      <header class="site-header">
+        <nav class="navbar">
+          <div class="brand-logo">
+            <a href="/"><h2>folio.</h2></a>
+          </div>
+          <div class="navbar-nav">
+            <ul class="ul-defaults-none main-menu">
+              <li class="nav-item">Home</li>
+              <li class="nav-item" data-open="about">About Me</li>
+              <li class="nav-item" data-open="contact">Contact</li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </main>
 
+    <!-- Modal -->
+    <!-- About Page Modal-->
+    <div id="about" class="full-site-modal page-block" data-animation="zoomInOut">
+      <header class="modal-header">
+        <h3>ABOUT PAGE</h3>
+        <i class="fas fa-times" data-close></i>
+      </header>
+      <div class="modal-body">
+        <div class="img-wrapper">
+          <img src="../assets/me.png" alt="">
+        </div>
+        <h2>Daniel Vazquez</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam iure nisi itaque totam qui, nihil omnis magnam ad, illo, doloribus voluptates! Minima veniam saepe dolorem nostrum, iure explicabo perferendis officiis?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi magnam praesentium asperiores impedit libero maiores repellendus? Laboriosam illum ab nam at quis quos, debitis facere porro. Alias, deserunt molestias? Quos.</p>
+        <div>
+          <div>Email Me:</div>
+          <a href="mailto:dvazdev@gmail.com">dvazdev@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <!-- Contact Page Modal-->
+    <div id="contact" class="full-site-modal page-block" data-animation="zoomInOut">
+      <header class="modal-header">
+        <h3>CONTACT PAGE</h3>
+        <i class="fas fa-times" data-close></i>
+      </header>
+      <div class="modal-body">
+        <div class="img-wrapper">
+          <img src="../assets/me.png" alt="">
+        </div>
+        <h2>Daniel Vazquez</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam iure nisi itaque totam qui, nihil omnis magnam ad, illo, doloribus voluptates! Minima veniam saepe dolorem nostrum, iure explicabo perferendis officiis?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi magnam praesentium asperiores impedit libero maiores repellendus? Laboriosam illum ab nam at quis quos, debitis facere porro. Alias, deserunt molestias? Quos.</p>
+        <div>
+          <div>Email Me:</div>
+          <a href="mailto:dvazdev@gmail.com">dvazdev@gmail.com</a>
+        </div>
+      </div>
+    </div>
 
     <script src="./js/main.js"></script>
   </body>
