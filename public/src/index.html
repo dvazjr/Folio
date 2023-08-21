@@ -14,6 +14,18 @@
     <title>Vite App</title>
   </head>
   <body>
+    <div class="theme-panel">
+      <div class="theme-body">
+        <span>Change Theme</span>
+        <div class="btn-group">
+          <button class="switcher-btn active" data-toggle="light">Light</button>
+          <button class="switcher-btn" data-toggle="dark">Dark</button>
+        </div>
+        <button class="theme-tab">
+          <i class="fas fa-chevron-left"> </i>
+        </button>
+      </div>
+    </div>
     <main class="site-wrapper">
       <!-- Header -->
       <header class="site-header">
@@ -30,47 +42,207 @@
           </div>
         </nav>
       </header>
-    </main>
 
-    <!-- Modal -->
-    <!-- About Page Modal-->
-    <div id="about" class="full-site-modal page-block" data-animation="zoomInOut">
-      <header class="modal-header">
-        <h3>ABOUT PAGE</h3>
-        <i class="fas fa-times" data-close></i>
-      </header>
-      <div class="modal-body">
-        <div class="img-wrapper">
-          <img src="../assets/me.png" alt="">
+      <!-- Hero Section-->
+      <section class="hero-bg">
+        <div class="container">
+          <div class="hero-content">
+            <div class="code-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h2 class="header-lg">Code. Eat. Sleep.</h2>
+            <div class="sub-header">
+              I create meaningful solutions for your brand and products
+              <br />
+              Give your clients the best experience possible.
+            </div>
+            <div class="btn btn-primary round-pill">
+              <a href="#" data-open="contact">Let's Talk Now</a>
+            </div>
+          </div>
         </div>
-        <h2>Daniel Vazquez</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam iure nisi itaque totam qui, nihil omnis magnam ad, illo, doloribus voluptates! Minima veniam saepe dolorem nostrum, iure explicabo perferendis officiis?</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi magnam praesentium asperiores impedit libero maiores repellendus? Laboriosam illum ab nam at quis quos, debitis facere porro. Alias, deserunt molestias? Quos.</p>
-        <div>
-          <div>Email Me:</div>
-          <a href="mailto:dvazdev@gmail.com">dvazdev@gmail.com</a>
+      </section>
+
+      <section class="portfolio-section">
+        <div class="container search-container">
+          <label for="search">
+            <input
+              autocomplete="off"
+              placeholder="Search..."
+              class="search-input"
+              id="search"
+              type="text"
+            />
+            <i class="fas fa-search"></i>
+          </label>
+          <ul class="portfolio-filter-nav ul-defaults-none">
+            <li data-filter="all" class="filter-link active">All Work</li>
+            <li data-filter="web" class="filter-link">Web Development</li>
+            <li data-filter="ui" class="filter-link">UI Design</li>
+          </ul>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-card" data-item="web" data-open="web-1">
+            <div class="card-body">
+              <img src="./assets/SaaS.PNG" alt="portfolio icon" />
+              <div class="card-popup-box">
+                <div>Web Development</div>
+                <h3>SaaS Website</h3>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card" data-item="ui" data-open="ui-1">
+            <div class="card-body">
+              <img
+                src="./assets/Pokemon Site Snippet.PNG"
+                alt="portfolio icon"
+              />
+              <div class="card-popup-box">
+                <div>Web Development</div>
+                <h3>Website W/ API</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <!-- About Page Modal-->
+      <div
+        id="about"
+        class="full-site-modal page-block"
+        data-animation="zoomInOut"
+      >
+        <header class="modal-header">
+          <h3>ABOUT PAGE</h3>
+          <i class="fas fa-times" data-close></i>
+        </header>
+        <div class="modal-body">
+          <div class="img-wrapper">
+            <img src="../assets/me.png" alt="" />
+          </div>
+          <h2>Daniel Vazquez</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
+            iure nisi itaque totam qui, nihil omnis magnam ad, illo, doloribus
+            voluptates! Minima veniam saepe dolorem nostrum, iure explicabo
+            perferendis officiis?
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            magnam praesentium asperiores impedit libero maiores repellendus?
+            Laboriosam illum ab nam at quis quos, debitis facere porro. Alias,
+            deserunt molestias? Quos.
+          </p>
+          <div>
+            <div>Email Me:</div>
+            <a href="mailto:dvazdev@gmail.com">dvazdev@gmail.com</a>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Contact Page Modal-->
-    <div id="contact" class="full-site-modal page-block" data-animation="zoomInOut">
-      <header class="modal-header">
-        <h3>CONTACT PAGE</h3>
-        <i class="fas fa-times" data-close></i>
-      </header>
-      <div class="modal-body">
-        <div class="img-wrapper">
-          <img src="../assets/me.png" alt="">
-        </div>
-        <h2>Daniel Vazquez</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam iure nisi itaque totam qui, nihil omnis magnam ad, illo, doloribus voluptates! Minima veniam saepe dolorem nostrum, iure explicabo perferendis officiis?</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi magnam praesentium asperiores impedit libero maiores repellendus? Laboriosam illum ab nam at quis quos, debitis facere porro. Alias, deserunt molestias? Quos.</p>
-        <div>
-          <div>Email Me:</div>
-          <a href="mailto:dvazdev@gmail.com">dvazdev@gmail.com</a>
+
+      <!-- Contact Page Modal-->
+      <div
+        id="contact"
+        class="full-site-modal page-block"
+        data-animation="zoomInOut"
+      >
+        <div class="container-fluid">
+          <header class="modal-header">
+            <h3>CONTACT PAGE</h3>
+            <i class="fas fa-times" data-close></i>
+          </header>
+          <div class="modal-body">
+            <div class="img-wrapper">
+              <img src="../assets/me.png" alt="" />
+            </div>
+            <h2>Daniel Vazquez</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
+              iure nisi itaque totam qui, nihil omnis magnam ad, illo, doloribus
+              voluptates! Minima veniam saepe dolorem nostrum, iure explicabo
+              perferendis officiis?
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              magnam praesentium asperiores impedit libero maiores repellendus?
+              Laboriosam illum ab nam at quis quos, debitis facere porro. Alias,
+              deserunt molestias? Quos.
+            </p>
+            <div>
+              <div>Email Me:</div>
+              <a href="mailto:dvazdev@gmail.com">dvazdev@gmail.com</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+
+      <!-- Popup Modals-->
+
+      <div id="web-1" class="modal" data-animation="slideInOutTop">
+        <div class="modal-dialog">
+          <header class="modal-header">
+            <h3>Web Project</h3>
+            <i class="fas fa-times" data-close></i>
+          </header>
+          <div class="modal-body">
+            <div class="img-wrapper">
+              <img src="./assets/SaaS.PNG" alt="Saas Website" />
+            </div>
+            <div class="text-wrapper">
+              <p><strong>Saas Website</strong></p>
+              <p>
+                This was one of my first website I put together for a project
+                putting together my HTML and CSS knowledge. Everything but the
+                stock images was created with plain vanilla CSS and it was a
+                blast to complete!
+              </p>
+              <div class="btn btn-primary round-pill">
+                <a href="https://saas-project-sandy.vercel.app/"
+                  >View Live Website</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="ui-1" data-animation="slideInOutTop" class="modal">
+        <div class="modal-dialog">
+          <header class="modal-header">
+            <h3>UI Project</h3>
+            <i class="fas fa-times" data-close></i>
+          </header>
+          <div class="modal-body">
+            <div class="img-wrapper">
+              <img
+                src="./assets/Pokemon Site Snippet.PNG"
+                alt="Pokemon Web App"
+              />
+            </div>
+            <div class="text-wrapper">
+              <p><strong>Pokemon Web Application</strong></p>
+              <p>
+                The original Pokemon is nostalgic for us youngsters that grew up in the 90's, so for my first
+                implementation of fetching API data and using it to create html
+                elements that came out as Pokemon cards made the most sense in
+                my head for a 1st project using API's and getting to understand
+                them.
+              </p>
+              <p>
+                I used vanilla JavaScript and HTML and CSS to get this project
+                up and running
+              </p>
+              <div class="btn btn-primary round-pill">
+                <a href="https://pokemon-website-w-api.vercel.app/"
+                  >View Live Website</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script src="./js/main.js"></script>
   </body>
