@@ -154,6 +154,12 @@
   z-index: 1000;
 }
 
+.card-body {
+  border: solid;
+    border-color: lightgray;
+    border-radius: 5px;
+}
+
 .modal-dialog {
   max-width: 800px;
   max-height: 80vh;
