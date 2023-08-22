@@ -114,7 +114,7 @@
 @media (max-width: 768px) {
     :root {
         --marquee-width: 100%;
-        --marquee-elms-displayed: 3
+        --marquee-elms-displayed: 1
     }
     .marquee:before,
     .marquee:after {
@@ -124,5 +124,26 @@
 @media (max-width: 450px) {
     :root {
 --marquee-elms-displayed: 1;
+--marquee-width: 25vw;
+--marquee-height: 11vh;
+    }
+    .about-text p,
+    .contact-text p {
+        font-size: 1rem;;
+    }
+    .modal-header {
+        font-size: .75rem;
+    }
+    .contact-text h2 {
+        font-size: 2rem;
+    }
+    .marquee {
+        font-size: .1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .marquee:before,
+    .marquee:after {
+        width: 2rem;
     }
 }
