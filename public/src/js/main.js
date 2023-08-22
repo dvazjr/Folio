@@ -132,10 +132,12 @@ document.addEventListener('keyup', (e) => {
     }
 })
 
-const elmsDisplay = getComputedStyle(root).getPropertyValue('--marquee-elms-displayed');
+const elmsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elms-displayed');
 const marqueeContent = document.querySelector('ul.marquee-content');
-root.style.setProperty('--marquee-elms', marqueeContent.children.length);
+const totalElms = marqueeContent.children.length;
 
-for (let i=0; 1 < elmsDisplay; i += 1) {
+root.style.setProperty('--marquee-elms', totalElms);
+
+for (let i = 0; i < elmsDisplayed; i += 1) {
     marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
