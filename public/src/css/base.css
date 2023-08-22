@@ -1,3 +1,11 @@
+:root {
+  --marquee-width: 80vw;
+  --marquee-height: 15vh;
+  --marquee-elms-displayed: 4;
+  --marquee-elms-width: calc(var(--marquee-width) / var(--marquee-elms-displayed));
+  --marquee-duration-animation: calc(var(--marquee-elms) * 3s);
+}
+
 section,
 footer,
 header,
@@ -36,6 +44,10 @@ h4 {
   color: var(--color-headings);
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-weight: 700;
 }
 
 p {
