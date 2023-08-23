@@ -160,4 +160,7 @@
     .form-control {
         line-height: 15px;
     }
+    .modal-body > .img-wrapper img {
+        height: 100px;
+    }
 }
