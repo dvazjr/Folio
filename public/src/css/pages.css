@@ -161,6 +161,12 @@
         line-height: 15px;
     }
     .modal-body > .img-wrapper img {
-        height: 100px;
+        content-visibility: hidden;
     }
+    h3 {
+        font-weight: 800;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
 }
