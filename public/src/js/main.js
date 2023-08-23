@@ -141,28 +141,3 @@ root.style.setProperty('--marquee-elms', totalElms);
 for (let i = 0; i < elmsDisplayed; i += 1) {
     marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
-
-const navbar = document.querySelector('.navbar');
-    const navItems = document.querySelectorAll('.nav-item');
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-
-    function toggleNavItems() {
-      const screenWidth = window.innerWidth;
-      const breakpoint = 768;
-
-      if (screenWidth <= breakpoint) {
-        navItems.forEach(item => {
-          item.style.display = 'none';
-        });
-        hamburgerMenu.style.display = 'block';
-      } else {
-        navItems.forEach(item => {
-          item.style.display = 'block';
-        });
-        hamburgerMenu.style.display = 'none';
-      }
-    }
-
-    toggleNavItems();
-
-    window.addEventListener('resize', toggleNavItems);
