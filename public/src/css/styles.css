@@ -154,12 +154,6 @@
   z-index: 1000;
 }
 
-.card-body {
-  border: solid;
-    border-color: lightgray;
-    border-radius: 5px;
-}
-
 .modal-dialog {
   max-width: 800px;
   max-height: 80vh;
@@ -211,6 +205,9 @@
   border-radius: 8px;
   object-fit: contain;
   height: 200px;
+  border: 3px solid black;
+  animation: wobbly 10s ease-in-out alternate infinite;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 }
 
 .search-container label {
@@ -280,11 +277,15 @@
   max-width: 255px;
 }
 
+.card-body {
+  border: solid;
+    border-color: lightgray;
+}
+
 .card-body img {
   width: 100%;
   height: 255px;
   object-fit: cover;
-  border-radius: 8px;
 }
 
 .card-popup-box {
@@ -360,3 +361,30 @@
   transform: none;
 }
 
+@-webkit-keyframes wobbly {
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%
+    }
+
+    to {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%
+    }
+}
+
+@keyframes wobbly {
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%
+    }
+
+    to {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%
+    }
+}
