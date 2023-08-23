@@ -208,7 +208,7 @@
   object-fit: contain;
   height: 300px;
   border: 5px solid rgb(113, 9, 204);
-  animation: wobbly 7s ease-in-out alternate infinite;
+  animation: wobbly 5s ease-in-out alternate infinite;
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 }
 

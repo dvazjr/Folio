@@ -128,9 +128,11 @@
 }
 @media (max-width: 450px) {
     :root {
---marquee-elms-displayed: 1;
---marquee-width: 25vw;
+--marquee-elms-displayed: 2;
 --marquee-height: 11vh;
+    }
+    .header-lg {
+        font-size: 2.5rem;
     }
     .about-text p,
     .contact-text p {
