@@ -156,8 +156,10 @@
     .marquee:after {
         width: 2rem;
     }
+   
     #about .img-wrapper img {
        height: 125px;
+       max-width: 125px;
     }
     .form-control {
         line-height: 15px;
