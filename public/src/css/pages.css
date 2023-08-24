@@ -108,7 +108,7 @@
 @media (max-width: 768px) {
     :root {
         --marquee-width: 100%;
-        --marquee-elms-displayed: 1
+        --marquee-elms-displayed: 2
     }
     .marquee:before,
     .marquee:after {
@@ -124,7 +124,6 @@
 }
 @media (max-width: 450px) {
     :root {
---marquee-elms-displayed: 2;
 --marquee-height: 11vh;
     }
     .header-lg {
@@ -160,13 +159,12 @@
     .form-control {
         line-height: 15px;
     }
-    .modal-body > .img-wrapper img {
+    .popup-img {
         content-visibility: hidden;
     }
     h3 {
-        font-weight: 800;
-        margin-left: auto;
-        margin-right: auto;
+            font-weight: 800;
+    margin-left: auto;
+    margin-right: auto;
     }
-    
 }

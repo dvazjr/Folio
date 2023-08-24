@@ -200,6 +200,10 @@
   max-width: 300px;
   margin-right: .75rem;
 }
+.modal-body .img-wrapper img {
+  height: 150px;
+}
+
 #about .img-wrapper img {
   max-width: 300px;
 }
