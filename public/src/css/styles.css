@@ -106,7 +106,7 @@
 }
 
 .code-icon {
-  background-color: #da5252;
+  background-color: #e72424;
   color: var(--color-text);
   padding: 1.25rem 1.5rem;
   border-radius: 50rem;
@@ -272,10 +272,10 @@
   flex-wrap: wrap;
   padding: 3rem 1rem;
   justify-content: center;
-  max-width: 1400px;
   width: 100%;
   margin: auto;
 }
+
 
 .portfolio-card {
   position: relative;

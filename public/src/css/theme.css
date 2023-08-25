@@ -6,6 +6,7 @@
     --color-text: #161c2d;
     --color-text-base: #161c2d;
     --border: #383f53;
+
 }
 
 [data-theme="light"] .hero-bg {
@@ -13,6 +14,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+[data-theme="light"] nav {
+    background: linear-gradient(to bottom, #dbdbdb, #ffff 30%);
+
 }
 
 [data-theme="dark"] {
@@ -23,4 +29,10 @@
     --color-text: #fff;
     --color-text-base: #161c2d;
     --border: #ced4da;
+    
+}
+
+[data-theme="dark"] nav {
+    background-image: url(../assets/hero-pattern.webp);
+    background: linear-gradient(to bottom, #0f1117, #171a23 40%);
 }
