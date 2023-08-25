@@ -162,7 +162,7 @@
   .form-control {
     line-height: 15px;
   }
-  .popup-img {
+  .img-wrapper.popup, .popup-img {
     content-visibility: hidden;
   }
   h3 {
