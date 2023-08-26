@@ -8,7 +8,7 @@
 }
 
 .theme-body {
-  background: #495fef;
+  background: linear-gradient(90deg, #e72424, #FF7F00);
   border: transparent;
   max-width: 185px;
   padding: 15px 13px;
@@ -50,7 +50,7 @@
 }
 
 .theme-body .btn-group .switcher-btn.active {
-  background-color: #ced4e7;
+  background-color: #dfc1c1;
 }
 
 .theme-panel.open {
@@ -67,7 +67,7 @@
   width: 30px;
   height: 50px;
   border: 0;
-  background: #495fef;
+  background: #e72424;
   color: white;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
@@ -214,6 +214,11 @@
   border: 5px solid rgb(113, 9, 204);
   animation: wobbly 5s ease-in-out alternate infinite;
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+}
+.contact-me .email {
+  color: cornflowerblue;
+  font-size: 1.4rem;
+  text-transform: lowercase;
 }
 
 .search-container label {

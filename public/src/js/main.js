@@ -141,3 +141,4 @@ root.style.setProperty('--marquee-elms', totalElms);
 for (let i = 0; i < elmsDisplayed; i += 1) {
     marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
+

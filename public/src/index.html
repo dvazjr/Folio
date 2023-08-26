@@ -54,8 +54,8 @@
             <div class="sub-header">
               Unveiling your vision with seamless web development and dynamic user experiences.
             </div>
-            <div class="btn btn-primary round-pill">
-              <a href="#" data-open="contact">Let's Talk Now</a>
+            <div class="btn-primary" id="btn-primary">
+              <a href="#btn-primary" data-open="contact"><span data-hover="Let's Talk Now">Start a Conversation</span></a>
             </div>
           </div>
         </div>
@@ -144,7 +144,7 @@
               </p>
               <div class="contact-me">
                 <p><strong>Email me:</strong></p>
-                <a href="mailto:dvazdev@gmail.com">dvazdev@gmail.com</a>
+                <a class="email" href="mailto:dvazdev@gmail.com">dvazdev@gmail.com</a>
               </div>
             </div>
           </div>
@@ -178,18 +178,18 @@
               <p>Have a project or question? Send me a message</p>
               <p>I will reply within 48 hours.</p>
             </div>
-            <form class="folio-form">
+            <form class="folio-form" id="contactForm">
               <input class="form-control" name="name" type="text" placeholder="Name" />
               <input class="form-control" name="email" type="text" placeholder="Email" />
               <input class="form-control" name="subject" type="text" placeholder="Subject" />
-              <textarea class="form-control" name="message" id="" cols="30" rows="3">
-"write your message here...</textarea
+              <textarea class="form-control" name="message" id="" cols="30" rows="3" placeholder="write your message here...">
+</textarea
               >
-              <input
-                type="submit"
-                value="Send"
-                class="btn btn-primary round-pill"
-              />
+              <div class="submit-wrapper">
+                <button type="submit" id="submitButton" class="submit-btn" data-hover="Send" href="mailto:dvazjr@gmail.com">
+                  Send
+                </button>
+              </div>
             </form>
           </div>
         </div>
@@ -215,10 +215,9 @@
                 stock images was created with plain vanilla CSS and it was a
                 blast to complete!
               </p>
-              <div class="btn btn-primary round-pill">
-                <a href="https://saas-project-sandy.vercel.app/"
-                  >View Live Website</a
-                >
+              <div class="btn-primary" id="btn-primary">
+                <a href="https://saas-project-sandy.vercel.app/"><span data-hover="View Live Website">View Live Website</span></a>
+              </div>
               </div>
             </div>
           </div>
@@ -250,10 +249,8 @@
                 I used vanilla JavaScript and HTML and CSS to get this project
                 up and running
               </p>
-              <div class="btn btn-primary round-pill">
-                <a href="https://pokemon-website-w-api.vercel.app/"
-                  >View Live Website</a
-                >
+              <div class="btn-primary">
+                <a href="https://pokemon-website-w-api.vercel.app/"><span data-hover="View Live Website">View Live Website</span></a>
               </div>
             </div>
           </div>
@@ -280,10 +277,8 @@
                 a fully functioning business website utilizing SEO 
                 techniques and sales verbiage to drive traffic and sales. 
               </p>
-              <div class="btn btn-primary round-pill">
-                <a href="https://sierralinellphotography.com/"
-                  >View Live Website</a
-                >
+              <div class="btn-primary">
+                <a href="https://sierralinellphotography.com/"><span data-hover="View Live Website">View Live Website</span></a>
               </div>
             </div>
           </div>
