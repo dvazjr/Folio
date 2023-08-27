@@ -1,10 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   const env = document.querySelector('meta[name="env"]').getAttribute('content');
-  console.log("Environment:", env);
   
-  const apiUrl = "https://www.danielvazquez.dev/api/send"
-
-  console.log("API URL:", apiUrl);
+  const apiUrl = "https://folio-git-main-dvazjr.vercel.app//api/send"
 
   const form = document.getElementById("contactForm");
 
