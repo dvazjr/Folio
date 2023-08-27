@@ -3,15 +3,13 @@ dotenv.config();
 
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-app.use(cors());
-const bodyParser = require('body-parser');
 const express = require('express');
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
-export default async (req, res) => {
+app.post('/api/send', async (req, res) => {
   if (req.method === 'POST') {
     try {
       const { name, email, subject, message } = req.body;
@@ -43,4 +41,6 @@ export default async (req, res) => {
   } else {
     res.status(405).end(); 
   }
-};
+});
+
+module.exports = app;

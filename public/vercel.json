@@ -7,10 +7,7 @@
   "routes": [
     {
       "src": "/api/send",
-      "dest": "/js/server.js",
-      "methods": ["POST"],
-      "headers": {
-        "Access-Control-Allow-Origin": "https://folio-710nk38h6-dvazjr.vercel.app"
+      "dest": "./js/client.js"
       
     }
   ]
