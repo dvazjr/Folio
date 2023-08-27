@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const env = document.querySelector('meta[name="env"]').getAttribute('content');
   console.log("Environment:", env);
   
-  const apiUrl = env === "deployment"
+  const apiUrl = env === "Production"
     ? "https://www.danielvazquez.dev/api/send"
     : "http://localhost:3000/send";
 
