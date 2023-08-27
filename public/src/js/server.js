@@ -1,16 +1,17 @@
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
 dotenv.config();
 
-import nodemailer from 'nodemailer';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import express from 'express';
+const nodemailer = require('nodemailer');
+const cors = require('cors');
+app.use(cors());
+const bodyParser = require('body-parser');
+const express = require('express');
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   if (req.method === 'POST') {
     try {
       const { name, email, subject, message } = req.body;
