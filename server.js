@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to the email sender server!");
 });
 
-app.post("/email", async (req, res) => {
+app.post("/send-email", async (req, res) => {
   const formData = req.body;
 
   const message = {
