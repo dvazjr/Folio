@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    const apiUrl =
-    process.env.NODE_ENV === "production"
+  const env = document.querySelector('meta[name="env"]').getAttribute('content');
+  const apiUrl =
+    env === "production"
       ? "https://www.danielvazquez.dev/api/send"
       : "http://localhost:3000/send";
 
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         jsonObject[key] = value;
       });
   
-      fetch(ENV_VARS.apiUrl, {
+      fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
