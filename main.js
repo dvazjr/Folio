@@ -90,7 +90,7 @@ searchBox.addEventListener('keyup', (e) => {
 })
 
 for (const link of filterLink) {
-    link.addEventListener("click", function() {
+    link.addEventListener("click", function () {
         setActive(link, '.filter-link');
         const filter = this.dataset.filter;
         portfolioItems.forEach((card) => {
