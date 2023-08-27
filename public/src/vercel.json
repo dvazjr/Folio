@@ -1,22 +1,13 @@
 {
-  "functions": {
-    "server.js": {
-      "runtime": "nodejs14.x"
+  "build": {
+    "env": {
+      "POSTMARK_SMTP_HOST": "smtp.postmarkapp.com",
+      "POSTMARK_SMTP_PORT": "587",
+      "POSTMARK_SMTP_USERNAME": "@smtp-username",
+      "POSTMARK_SMTP_PASSWORD": "@smtp-password"
+    },
+    "functions": {
+      "api/**/*.js"
     }
-  },
-  "routes": [
-    {
-      "src": "/api/send",
-      "dest": "/js/server.js"
-      
-    }
-  ],
-  "api/test.js": {
-    "memory": 3008,
-    "maxDuration": 30
-  },
-  "api/*.js": {
-    "memory": 3008,
-    "maxDuration": 30
   }
 }
