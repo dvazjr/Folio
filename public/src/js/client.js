@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
       jsonObject[key] = value;
     });
 
-    fetch(apiUrl, { // Use apiUrl here
+    fetch(apiUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
