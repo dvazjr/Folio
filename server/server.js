@@ -40,6 +40,6 @@ module.exports = async (req, res) => {
       res.status(500).json({ message: 'Failed to send email', error: error.message });
     }
   } else {
-    res.status(405).end(); // Method not allowed
+    res.status(405).end(); 
   }
 };

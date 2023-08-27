@@ -7,7 +7,7 @@
   "routes": [
     {
       "src": "/api/send",
-      "dest": "/server.js"
+      "dest": "/server/server.js"
     }
   ]
 }
