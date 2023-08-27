@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   const env = document.querySelector('meta[name="env"]').getAttribute('content');
   
-  const apiUrl = "https://folio-git-main-dvazjr.vercel.app//api/send"
+  const apiUrl = "https://folio-git-main-dvazjr.vercel.app/api/send"
 
   const form = document.getElementById("contactForm");
 
