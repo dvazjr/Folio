@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+    const apiUrl =
+    process.env.NODE_ENV === "production"
+      ? "https://www.danielvazquez.dev//api/send"
+      : "http://localhost:3000/send";
+
     const form = document.getElementById("contactForm");
   
     form.addEventListener("submit", function(event) {
@@ -10,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         jsonObject[key] = value;
       });
   
-      fetch("http://localhost:3000/send", {
+      fetch(apiURL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

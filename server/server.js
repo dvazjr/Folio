@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   res.send('Server is running.');
 });
 
-app.post('/send', async (req, res) => {
+app.post('/api/send', async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
 
