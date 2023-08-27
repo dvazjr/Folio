@@ -1,33 +1,29 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const env = document.querySelector('meta[name="env"]').getAttribute('content');
-  
-  const apiUrl = "https://folio-git-main-dvazjr.vercel.app/api/send"
+// document.addEventListener("DOMContentLoaded", function() {
+//   const form = document.getElementById("contactForm");
 
-  const form = document.getElementById("contactForm");
+//   form.addEventListener("submit", function(event) {
+//     event.preventDefault();
 
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
+//     const formData = new FormData(form);
+//     let jsonObject = {};
 
-    const formData = new FormData(form);
-    let jsonObject = {};
-    
-    formData.forEach((value, key) => {
-      jsonObject[key] = value;
-    });
+//     formData.forEach((value, key) => {
+//       jsonObject[key] = value;
+//     });
 
-    fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(jsonObject),
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log("Success:", data);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-  });
-});
+//     fetch('/api/send', { // Use a relative path to the API endpoint
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(jsonObject),
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//       console.log("Success:", data);
+//     })
+//     .catch((error) => {
+//       console.error("Error:", error);
+//     });
+//   });
+// });
