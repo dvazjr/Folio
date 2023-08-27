@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/dvazjr/Folio/issues"
   },
-  "homepage": "https://github.com/dvazjr/Folio#readme"
+  "homepage": "https://github.com/dvazjr/Folio#readme",
+  "dependencies": {
+    "nodemailer": "^6.9.4",
+    "nodemailer-postmark-transport": "^5.2.1"
+  }
 }
