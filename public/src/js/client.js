@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
   const env = document.querySelector('meta[name="env"]').getAttribute('content');
+  console.log("Environment:", env);
   const apiUrl =
-    env === "production"
+    env === "deployment"
       ? "https://www.danielvazquez.dev/api/send"
       : "http://localhost:3000/send";
-      
+      console.log(apiUrl)
   const form = document.getElementById("contactForm");
 
   form.addEventListener("submit", function(event) {
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
       jsonObject[key] = value;
     });
 
-    fetch(apiUrl, {
+    fetch(ENV_VARS.apiUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
