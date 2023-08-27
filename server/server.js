@@ -1,41 +1,49 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 
-const express = require('express');
-const nodemailer = require('nodemailer');
-const cors = require('cors');
-const bodyParser = require('body-parser');
+import express from 'express';
+import nodemailer from 'nodemailer';
+import cors from 'cors';
+import bodyParser from 'body-parser';
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('Server is running.');
+});
+
 app.post('/send', async (req, res) => {
-  const { name, email, subject, message } = req.body;
-
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD
-    }
-  });
-  
-
-  const mailOptions = {
-    from: email,
-    to: 'dvazdev@gmail.com', // replace with your business email
-    subject: subject,
-    text: `From: ${name}\nEmail: ${email}\nMessage: ${message}`
-  };
-
   try {
+    const { name, email, subject, message } = req.body;
+
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      port: 465,
+      secure: true, 
+      auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD
+      }
+    });
+
+    const mailOptions = {
+      from: email,
+      to: 'dvazdev@gmail.com',
+      subject: `Portfolio Form Submission: ${subject}`,
+      text: `From: ${name}\nEmail: ${email}\nMessage: ${message}`
+    };
+
     await transporter.sendMail(mailOptions);
-    res.status(200).send('Email Sent');
+    res.status(200).json({ message: 'Email Sent' });
+
   } catch (error) {
-    res.status(500).send('Failed to send email');
+    console.error("Email sending failed:", error);
+    res.status(500).json({ message: 'Failed to send email', error: error.message });
   }
 });
 
-app.listen(3001, () => {
-  console.log('Server running on http://localhost:3001/');
+app.listen(3000, () => {
+  console.log('Server running on http://localhost:3000/');
 });
