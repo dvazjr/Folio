@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/send.js": {
+    "server.js": {
       "runtime": "nodejs14.x"
     }
   },
