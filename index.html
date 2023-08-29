@@ -192,12 +192,14 @@
               action="#"
             >
               <input
+              id="form-name"
                 class="form-control"
                 name="name"
                 type="text"
                 placeholder="Name"
               />
               <input
+              id="form-email"
                 class="form-control"
                 name="email"
                 type="text"
@@ -205,12 +207,14 @@
                 required
               />
               <input
+              id="form-subject"
                 class="form-control"
                 name="subject"
                 type="text"
                 placeholder="Subject"
               />
               <textarea
+              id="form-message"
                 class="form-control"
                 name="message"
                 id=""
@@ -378,26 +382,26 @@
     <script type="module" src="/main.js"></script>
     
     <script type="text/javascript">
-      const nameInput = document.querySelector('[name="name"]');
-      const emailInput = document.querySelector('[name="email"]');
-      const subjectInput = document.querySelector('[name="subject"]');
-      const messageInput = document.querySelector('[name="message"]');
-
-
-        Email.send({
-          SecureToken: "dc8e6503-b200-4136-9731-2478828ca348",
-          To: "dvazdev@gmail.com",
-          From: "dvazdev@gmail.com",
-          Name: nameInput.value,
-          Sender: emailInput.value,
-          Subject: subjectInput.value,
-          Body: messageInput.value,
-        }).then((message) => {
-          const resultMessage = document.createElement("p");
-          resultMessage.textContent = message;
-          document.body.appendChild(resultMessage);
-        });
-
+      const nameInput = document.getElementById('form-name');
+      const emailInput = document.getElementById('form-email');
+      const subjectInput = document.getElementById('form-subject');
+      const messageInput = document.getElementById('form-message');
+    
+      const emailData = {
+        SecureToken: "dc8e6503-b200-4136-9731-2478828ca348",
+        To: "dvazdev@gmail.com",
+        From: "dvazdev@gmail.com",
+        Subject: "Website Form Filled Out By:" + emailInput.value,
+        Body: messageInput.value,
+      };
+    
+      Email.send(emailData).then((message) => {
+        const resultMessage = document.createElement("p");
+        resultMessage.textContent = message;
+        document.body.appendChild(resultMessage);
+      });
     </script>
+    
+    
   </body>
 </html>
