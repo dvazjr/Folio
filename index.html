@@ -223,14 +223,13 @@
                 placeholder="write your message here..."
               ></textarea>
               <div class="submit-wrapper">
-                <button
+                <input
                   type="submit"
                   id="submitButton"
                   class="submit-btn"
                   data-hover="Send"
                 >
-                  Send
-                </button>
+                </input>
               </div>
             </form>
           </div>
@@ -381,35 +380,27 @@
     </section>
     <script type="module" src="/main.js"></script>
     
-    <script type="text/javascript">
+    <script>
       const nameInput = document.getElementById('form-name');
       const emailInput = document.getElementById('form-email');
       const subjectInput = document.getElementById('form-subject');
       const messageInput = document.getElementById('form-message');
-      const submitButton = document.getElementById('submit-button');
+      const submitForm = document.getElementsByClassName('folio-form');
     
-      function sendEmail(event) {
-        event.preventDefault();
-    
-        const emailData = {
-          SecureToken: "dc8e6503-b200-4136-9731-2478828ca348",
-          To: "dvazdev@gmail.com",
-          From: "info@danielvazquez.dev",
-          Subject: subjectInput.value,
-          Body: nameInput.value + emailInput.value + messageInput.value,
-        };
-    
-        Email.send(emailData).then((message) => {
-          const resultMessage = document.createElement("p");
-          resultMessage.textContent = message;
-          document.body.appendChild(resultMessage);
-        });
-      }
-    
-      submitButton.addEventListener('submit', sendEmail);
+        submitForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        console.log('clicked');
+
+        Email.send({
+                  SecureToken: "dc8e6503-b200-4136-9731-2478828ca348",
+                  To: "dvazdev@gmail.com",
+                  From: "info@danielvazquez.dev",
+                  Subject: subjectInput.value,
+                  Body: nameInput.value + emailInput.value + messageInput.value
+                }).then(
+                  message => alert(message)
+                  );
+                });  
     </script>
-    
-    
-    
   </body>
 </html>
