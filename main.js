@@ -132,6 +132,20 @@ document.addEventListener('keyup', (e) => {
     }
 })
 
+document.addEventListener("DOMContentLoaded", function() {
+    const button = document.getElementById("portfolio-nav");
+    const portfolio = document.getElementById("portfolio-grid");
+    
+    button.addEventListener("click", function() {
+        const scrollOptions = {
+          behavior: "smooth"
+        };
+    
+        portfolio.scrollIntoView(scrollOptions);
+    });
+  });
+  
+
 const elmsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elms-displayed');
 const marqueeContent = document.querySelector('ul.marquee-content');
 const totalElms = marqueeContent.children.length;

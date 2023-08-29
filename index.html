@@ -38,6 +38,7 @@
             <ul class="ul-defaults-none main-menu">
               <li class="nav-item" data-open="about">About Me</li>
               <li class="nav-item" data-open="contact">Contact</li>
+              <li class="nav-item" id="portfolio-nav">Portfolio</li>
             </ul>
           </div>
         </nav>
@@ -89,7 +90,7 @@
           </ul>
         </div>
 
-        <div class="portfolio-grid">
+        <div class="portfolio-grid" id="portfolio-grid">
           <div class="portfolio-card" data-item="web" data-open="web-1">
             <div class="card-body">
               <img src="./assets/SaaS.PNG" alt="portfolio icon" />
@@ -223,13 +224,13 @@
                 placeholder="write your message here..."
               ></textarea>
               <div class="submit-wrapper">
-                <input
+                <button
+                value="Send"
                   type="submit"
                   id="submitButton"
                   class="submit-btn"
                   data-hover="Send"
-                >
-                </input>
+                >Send</button>
               </div>
             </form>
           </div>
@@ -386,30 +387,31 @@
       const subjectInput = document.getElementById('form-subject');
       const messageInput = document.getElementById('form-message');
       const submitForm = document.getElementById('contact-form');
-    
-        submitForm.addEventListener('submit', (e) => {
+      const contact = document.getElementById('contact');
+      
+      submitForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         console.log('clicked');
-
-        Email.send({
-                  SecureToken: "dc8e6503-b200-4136-9731-2478828ca348",
-                  To: "dvazdev@gmail.com",
-                  From: "info@danielvazquez.dev",
-                  Subject: subjectInput.value,
-                  Body: 'Name: ' + nameInput.value + ' ' + 'Email: ' + emailInput.value + ' ' + 'Message: ' + messageInput.value
-                }).then((message) => {
-      console.log('Email sent successfully:', message);
-      const resultMessage = document.createElement('p');
-      resultMessage.textContent = 'Email sent successfully!';
-      document.body.appendChild(resultMessage);
-    })
-    .catch((error) => {
-      console.error('Error sending email:', error);
-      const resultMessage = document.createElement('p');
-      resultMessage.textContent = 'Failed to send email.';
-      document.body.appendChild(resultMessage); 
-    });
-  });
+    
+        try {
+          await Email.send({
+            SecureToken: "dc8e6503-b200-4136-9731-2478828ca348",
+            To: "dvazdev@gmail.com",
+            From: "info@danielvazquez.dev",
+            Subject: subjectInput.value,
+            Body: 'Name: ' + nameInput.value + ' ' + 'Email: ' + emailInput.value + ' ' + 'Message: ' + messageInput.value
+          });
+    
+          const confirmation = confirm('Message Received!');
+          if (confirmation) {
+        contact.style.display = 'none';
+      }
+        } catch (error) {
+          console.error('Error sending email:', error);
+          alert('Failed to send email.');
+        }
+      });
     </script>
+    
   </body>
 </html>
