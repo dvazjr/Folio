@@ -382,7 +382,6 @@
     <script type="module" src="/main.js"></script>
     
     <script type="text/javascript">
-      const form = document.getElementById('contactForm');
       const nameInput = document.getElementById('form-name');
       const emailInput = document.getElementById('form-email');
       const subjectInput = document.getElementById('form-subject');
@@ -395,7 +394,7 @@
         const emailData = {
           SecureToken: "dc8e6503-b200-4136-9731-2478828ca348",
           To: "dvazdev@gmail.com",
-          From: "dvazdev@gmail.com",
+          From: "info@danielvazquez.dev",
           Subject: subjectInput.value,
           Body: nameInput.value + emailInput.value + messageInput.value,
         };
@@ -407,7 +406,7 @@
         });
       }
     
-      form.addEventListener('submit', sendEmail);
+      submitButton.addEventListener('submit', sendEmail);
     </script>
     
     
