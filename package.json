@@ -1,23 +1,14 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "testing it out",
-  "main": "main.js",
+  "name": "tester",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "npm run build"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dvazjr/Folio.git"
-  },
-  "author": "Daniel",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dvazjr/Folio/issues"
-  },
-  "homepage": "https://github.com/dvazjr/Folio#readme",
-  "dependencies": {
-    "nodemailer": "^6.9.4",
-    "nodemailer-postmark-transport": "^5.2.1"
+  "devDependencies": {
+    "vite": "^4.4.5"
   }
 }
