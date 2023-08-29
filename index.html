@@ -385,7 +385,7 @@
       const emailInput = document.getElementById('form-email');
       const subjectInput = document.getElementById('form-subject');
       const messageInput = document.getElementById('form-message');
-      const submitForm = document.getElementById('contact-form')[0];
+      const submitForm = document.getElementById('contact-form');
     
         submitForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -396,11 +396,20 @@
                   To: "dvazdev@gmail.com",
                   From: "info@danielvazquez.dev",
                   Subject: subjectInput.value,
-                  Body: nameInput.value + emailInput.value + messageInput.value
-                }).then(
-                  message => alert(message)
-                  );
-                });  
+                  Body: 'Name: ' + nameInput.value + ' ' + 'Email: ' + emailInput.value + ' ' + 'Message: ' + messageInput.value
+                }).then((message) => {
+      console.log('Email sent successfully:', message);
+      const resultMessage = document.createElement('p');
+      resultMessage.textContent = 'Email sent successfully!';
+      document.body.appendChild(resultMessage);
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error);
+      const resultMessage = document.createElement('p');
+      resultMessage.textContent = 'Failed to send email.';
+      document.body.appendChild(resultMessage); 
+    });
+  });
     </script>
   </body>
 </html>
