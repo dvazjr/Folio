@@ -382,25 +382,34 @@
     <script type="module" src="/main.js"></script>
     
     <script type="text/javascript">
+      const form = document.getElementById('contactForm');
       const nameInput = document.getElementById('form-name');
       const emailInput = document.getElementById('form-email');
       const subjectInput = document.getElementById('form-subject');
       const messageInput = document.getElementById('form-message');
+      const submitButton = document.getElementById('submit-button');
     
-      const emailData = {
-        SecureToken: "dc8e6503-b200-4136-9731-2478828ca348",
-        To: "dvazdev@gmail.com",
-        From: "dvazdev@gmail.com",
-        Subject: "Website Form Filled Out By:" + emailInput.value,
-        Body: messageInput.value,
-      };
+      function sendEmail(event) {
+        event.preventDefault();
     
-      Email.send(emailData).then((message) => {
-        const resultMessage = document.createElement("p");
-        resultMessage.textContent = message;
-        document.body.appendChild(resultMessage);
-      });
+        const emailData = {
+          SecureToken: "dc8e6503-b200-4136-9731-2478828ca348",
+          To: "dvazdev@gmail.com",
+          From: "dvazdev@gmail.com",
+          Subject: "Website Form Filled Out By: " + emailInput.value,
+          Body: messageInput.value,
+        };
+    
+        Email.send(emailData).then((message) => {
+          const resultMessage = document.createElement("p");
+          resultMessage.textContent = message;
+          document.body.appendChild(resultMessage);
+        });
+      }
+    
+      form.addEventListener('submit', sendEmail);
     </script>
+    
     
     
   </body>
