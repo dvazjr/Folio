@@ -10,6 +10,7 @@
       src="https://kit.fontawesome.com/7f51f8a9fe.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
   </head>
@@ -185,7 +186,12 @@
               <p>Have a project or question? Send me a message</p>
               <p>I will reply within 48 hours.</p>
             </div>
-            <form class="folio-form" id="contactForm" method="POST" action="/send-email">
+            <form
+              class="folio-form"
+              id="contactForm"
+              method="POST"
+              action="/send-email"
+            >
               <input
                 class="form-control"
                 name="name"
@@ -216,6 +222,8 @@
               <div class="submit-wrapper">
                 <button
                   type="submit"
+                  value="Send Email"
+                  onclick="sendEmail()"
                   id="submitButton"
                   class="submit-btn"
                   data-hover="Send"
@@ -371,6 +379,28 @@
       </p>
     </section>
     <script type="module" src="/main.js"></script>
-    <script type="module" src="/mailer.js"></script>
+    
+    <script type="text/javascript">
+      const nameInput = document.querySelector('[name="name"]');
+      const emailInput = document.querySelector('[name="email"]');
+      const subjectInput = document.querySelector('[name="subject"]');
+      const messageInput = document.querySelector('[name="message"]');
+
+      function sendEmail() {
+        Email.send({
+          SecureToken: "dc8e6503-b200-4136-9731-2478828ca348",
+          To: "dvazdev@gmail.com",
+          From: "dvazdev@gmail.com",
+          Name: nameInput.value,
+          Sender: emailInput.value,
+          Subject: subjectInput.value,
+          Body: messageInput.value,
+        }).then((message) => {
+          const resultMessage = document.createElement("p");
+          resultMessage.textContent = message;
+          document.body.appendChild(resultMessage);
+        });
+      }
+    </script>
   </body>
 </html>
