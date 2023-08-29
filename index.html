@@ -189,8 +189,7 @@
             <form
               class="folio-form"
               id="contactForm"
-              method="POST"
-              action="/send-email"
+              action="#"
             >
               <input
                 class="form-control"
@@ -222,8 +221,6 @@
               <div class="submit-wrapper">
                 <button
                   type="submit"
-                  value="Send Email"
-                  onclick="sendEmail()"
                   id="submitButton"
                   class="submit-btn"
                   data-hover="Send"
@@ -386,7 +383,7 @@
       const subjectInput = document.querySelector('[name="subject"]');
       const messageInput = document.querySelector('[name="message"]');
 
-      function sendEmail() {
+
         Email.send({
           SecureToken: "dc8e6503-b200-4136-9731-2478828ca348",
           To: "dvazdev@gmail.com",
@@ -400,7 +397,7 @@
           resultMessage.textContent = message;
           document.body.appendChild(resultMessage);
         });
-      }
+
     </script>
   </body>
 </html>
