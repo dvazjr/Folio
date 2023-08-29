@@ -396,8 +396,8 @@
           SecureToken: "dc8e6503-b200-4136-9731-2478828ca348",
           To: "dvazdev@gmail.com",
           From: "dvazdev@gmail.com",
-          Subject: "Website Form Filled Out By: " + emailInput.value,
-          Body: messageInput.value,
+          Subject: subjectInput.value,
+          Body: nameInput.value + emailInput.value + messageInput.value,
         };
     
         Email.send(emailData).then((message) => {
