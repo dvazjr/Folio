@@ -188,7 +188,7 @@
             </div>
             <form
               class="folio-form"
-              id="contactForm"
+              id="contact-form"
               action="#"
             >
               <input
@@ -385,7 +385,7 @@
       const emailInput = document.getElementById('form-email');
       const subjectInput = document.getElementById('form-subject');
       const messageInput = document.getElementById('form-message');
-      const submitForm = document.getElementsByClassName('folio-form');
+      const submitForm = document.getElementById('contact-form')[0];
     
         submitForm.addEventListener('submit', (e) => {
         e.preventDefault();
