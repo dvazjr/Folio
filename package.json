@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "eslint": "^8.48.0",
+    "excalidraw": "^0.6.4"
   }
 }

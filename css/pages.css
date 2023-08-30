@@ -95,7 +95,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   #about .img-wrapper,
   #about .about-text {
     flex: initial;
@@ -109,7 +109,8 @@
     height: 200px;
   }
 }
-@media (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
   :root {
     --marquee-width: 100%;
     --marquee-elms-displayed: 2;
@@ -124,8 +125,29 @@
   .hide-on-small {
     display: none;
   }
+
+  button#toggle-btn {
+    display: block;
+  }
+   nav.navbar {
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-nav {
+    display: none;
+  }
+  .navbar-nav.open {
+    display: block;
+  }
+  .navbar-nav ul {
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
+    background: linear-gradient(45deg, #ffe700, #ffffff00);
+  }
 }
-@media (max-width: 450px) {
+@media screen and (max-width: 450px) {
   :root {
     --marquee-height: 11vh;
   }
@@ -139,8 +161,9 @@
   .contact-text {
     padding-bottom: 20px;
   }
-  .modal-header {
+  header.modal-header {
     font-size: 0.75rem;
+    padding-bottom: 0;
   }
   .contact-text h2 {
     font-size: 2rem;
@@ -154,6 +177,8 @@
   .marquee:after {
     width: 2rem;
   }
+  #about .modal-body {
+    padding: 2rem 1rem 0 1rem;  }
 
   #about .about.img-wrapper img {
     height: 125px;
@@ -162,7 +187,8 @@
   .form-control {
     line-height: 15px;
   }
-  .img-wrapper.popup, .popup-img {
+  .img-wrapper.popup,
+  .popup-img {
     content-visibility: hidden;
   }
   h3 {

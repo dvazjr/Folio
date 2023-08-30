@@ -84,14 +84,62 @@
   transform: scaleX(-1);
 }
 
-.navbar {
-  display: flex;
-  flex-flow: row nowrap;
-  padding: 0.5rem 1rem;
+#toggle-btn {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
 
-.navbar .navbar-nav {
-  margin-left: auto;
+#toggle-btn i {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: var(--color-headings);
+  height: 2.5rem;
+  width: 3.5rem;
+  font-size: 1.5rem;
+}
+
+#toggle-btn .open-icon {
+  display: block;
+}
+#toggle-btn .close-icon {
+  display: none;
+}
+#toggle-btn.open .open-icon {
+  display: none;
+}
+#toggle-btn.open .close-icon {
+  display: block;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.navbar-nav .main-menu {
+margin: 0;
+padding-right: 1rem;
+display: flex;
+gap: 1rem;
+list-style-type: none;
+}
+
+.navbar-nav .nav-item {
+  color: var(--color-headings);
+  text-decoration: none;
 }
 
 .brand-logo a h2 {
@@ -107,7 +155,7 @@
 
 .code-icon {
   background-color: #e72424;
-  color: var(--color-text);
+  color: black;
   padding: 1.25rem 1.5rem;
   border-radius: 50rem;
   display: inline-block;
@@ -121,7 +169,7 @@
   line-height: 1.5;
 }
 
-.main-menu {
+/* .main-menu {
   display: flex;
 }
 
@@ -129,7 +177,7 @@
   padding: 18px;
   line-height: 26px;
   cursor: pointer;
-}
+} */
 
 .modal {
   display: flex;

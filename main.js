@@ -21,6 +21,28 @@ const toggleTheme = document.querySelector(themeTab);
 const switcher = document.querySelectorAll(switcherBtn);
 const currentTheme = localStorage.getItem(theme)
 
+
+
+/*Toggle Menu Button */
+const responsiveMenuButton = document.getElementById('toggle-btn');
+const navWrapper = document.querySelector('.navbar-nav')
+
+responsiveMenuButton.addEventListener('click', () => {
+    navWrapper.classList.toggle('open');
+    responsiveMenuButton.classList.toggle('open');
+});
+
+const allNavItems = document.querySelectorAll('.navbar-nav li');
+
+allNavItems.forEach((navItem) => {
+    navItem.addEventListener('click', () => {
+        navWrapper.classList.remove('open');
+        responsiveMenuButton.classList.remove('open');
+    });
+});
+
+
+
 /* Portfolio */
 const filterLink = document.querySelectorAll(dataFilter);
 const portfolioItems = document.querySelectorAll(portfolioData);
@@ -132,19 +154,21 @@ document.addEventListener('keyup', (e) => {
     }
 })
 
-document.addEventListener("DOMContentLoaded", function() {
+/* Portfolio Scroll Down Effect */
+
+document.addEventListener("DOMContentLoaded", function () {
     const button = document.getElementById("portfolio-nav");
-    const portfolio = document.getElementById("portfolio-grid");
-    
-    button.addEventListener("click", function() {
+    const portfolio = document.querySelector(".search-container");
+
+    button.addEventListener("click", function () {
         const scrollOptions = {
-          behavior: "smooth"
+            behavior: "smooth"
         };
-    
+
         portfolio.scrollIntoView(scrollOptions);
     });
-  });
-  
+});
+
 
 const elmsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elms-displayed');
 const marqueeContent = document.querySelector('ul.marquee-content');
