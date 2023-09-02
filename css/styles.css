@@ -139,6 +139,7 @@ list-style-type: none;
 .navbar-nav .nav-item {
   color: var(--color-headings);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .brand-logo a h2 {
