@@ -169,7 +169,7 @@ list-style-type: none;
   line-height: 1.5;
 }
 
-/* .main-menu {
+.main-menu {
   display: flex;
 }
 
@@ -177,7 +177,7 @@ list-style-type: none;
   padding: 18px;
   line-height: 26px;
   cursor: pointer;
-} */
+}
 
 .modal {
   display: flex;
@@ -251,10 +251,12 @@ list-style-type: none;
   height: 150px;
 }
 
-#about .img-wrapper img {
+#about .img-wrapper img,
+.hero.img-wrapper img {
   max-width: 300px;
 }
-#about .img-wrapper img {
+#about .img-wrapper img,
+.hero.img-wrapper img {
   width: 100%;
   object-fit: contain;
   height: 300px;
