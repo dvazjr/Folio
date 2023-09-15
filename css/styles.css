@@ -414,8 +414,9 @@ list-style-type: none;
 .top-footer > .social-icons > ul > li {
   list-style-type: none;
 }
-.follow,
-.social-icons > ul {
+
+.top-footer .follow,
+.top-footer .social-icons ul {
   display: flex;
   align-items: center;
   gap: 1rem;
