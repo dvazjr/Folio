@@ -265,7 +265,7 @@ list-style-type: none;
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 }
 .contact-me .email {
-  color: cornflowerblue;
+  
   font-size: 1.4rem;
   text-transform: lowercase;
 }
@@ -482,5 +482,17 @@ list-style-type: none;
 
   to {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+@keyframes header-lg{0%{letter-spacing:2rem;opacity:0}50%{opacity:.4}100%{letter-spacing:normal;opacity:1}}
+@keyframes sub-header{0%{transform:translateZ(-80px);opacity:0}100%{transform:translateZ(0);opacity:1}}
+
+@keyframes about {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
   }
 }

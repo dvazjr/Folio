@@ -97,6 +97,7 @@ p {
   font-size: 5rem;
   letter-spacing: -2.5px;
   line-height: 1.05;
+  animation:header-lg 1s cubic-bezier(.215,.61,.355,1.000) both
 }
 
 .header-md {
@@ -110,6 +111,7 @@ p {
   line-height: 1.5;
   padding-top: 1.25rem;
   padding-bottom: 1.875rem;
+  animation:sub-header 1s cubic-bezier(.39,.575,.565,1.000) 1s both
 }
 
 .btn-primary a {
