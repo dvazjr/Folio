@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/pages.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/theme.css" />
-    <link rel="shortcut icon" href="./assets/favicon.ico">
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
     <script
       src="https://kit.fontawesome.com/7f51f8a9fe.js"
       crossorigin="anonymous"
@@ -32,10 +32,9 @@
     <main class="site-wrapper">
       <!-- Header -->
       <header class="site-header">
-
         <button aria-label="toggle menu" id="toggle-btn">
           <i class="fas fa-bars open-icon" id="open-toggle-icon"></i>
-          <i class="fa-regular fa-x close-icon" id="close-toggle-icon"></i>          
+          <i class="fa-regular fa-x close-icon" id="close-toggle-icon"></i>
         </button>
 
         <nav class="navbar">
@@ -131,10 +130,7 @@
           </div>
           <div class="portfolio-card" data-item="ui" data-open="ui-2">
             <div class="card-body">
-              <img
-                src="./assets/Herfmate.png"
-                alt="portfolio icon"
-              />
+              <img src="./assets/Herfmate.png" alt="portfolio icon" />
               <div class="card-popup-box">
                 <div>UI Design</div>
                 <h3>Fully Designed Website</h3>
@@ -207,20 +203,16 @@
               <p>Have a project or question? Send me a message</p>
               <p>I will reply within 48 hours.</p>
             </div>
-            <form
-              class="folio-form"
-              id="contact-form"
-              action="#"
-            >
+            <form class="folio-form" id="contact-form" action="#">
               <input
-              id="form-name"
+                id="form-name"
                 class="form-control"
                 name="name"
                 type="text"
                 placeholder="Name"
               />
               <input
-              id="form-email"
+                id="form-email"
                 class="form-control"
                 name="email"
                 type="text"
@@ -228,14 +220,14 @@
                 required
               />
               <input
-              id="form-subject"
+                id="form-subject"
                 class="form-control"
                 name="subject"
                 type="text"
                 placeholder="Subject"
               />
               <textarea
-              id="form-message"
+                id="form-message"
                 class="form-control"
                 name="message"
                 id=""
@@ -245,12 +237,14 @@
               ></textarea>
               <div class="submit-wrapper">
                 <button
-                value="Send"
+                  value="Send"
                   type="submit"
                   id="submitButton"
                   class="submit-btn"
                   data-hover="Send"
-                >Send</button>
+                >
+                  Send
+                </button>
               </div>
             </form>
           </div>
@@ -319,7 +313,9 @@
                 up and running
               </p>
               <div class="btn-primary">
-                <a href="https://pokemon-website-w-api.vercel.app/" target="_blank"
+                <a
+                  href="https://pokemon-website-w-api.vercel.app/"
+                  target="_blank"
                   ><span data-hover="View Live Website"
                     >View Live Website</span
                   ></a
@@ -378,13 +374,14 @@
             <div class="text-wrapper">
               <p><strong>Herfmate - Product Website</strong></p>
               <p>
-                This was an all-design website made for a client who patented a product and wanted to sell it directly to the client.
+                This was an all-design website made for a client who patented a
+                product and wanted to sell it directly to the client.
               </p>
-              <p>
-                This was designed with Show It Web Builder.
-              </p>
+              <p>This was designed with Show It Web Builder.</p>
               <div class="btn-primary">
-                <a href="https://herfmate.com/" target="_blank"
+                <a
+                  href="https://herfmate.showitpreview.com/home"
+                  target="_blank"
                   ><span data-hover="View Live Website"
                     >View Live Website</span
                   ></a
@@ -432,44 +429,51 @@
       <br />
       <p class="disclaimer">
         When you visit or interact with this site, services or tools, I or my
-        authorized service providers<br> may use cookies for storing information to
-        help provide you with a better, faster and safer experience and for
-        marketing purposes.
+        authorized service providers<br />
+        may use cookies for storing information to help provide you with a
+        better, faster and safer experience and for marketing purposes.
       </p>
     </section>
     <script type="module" src="/main.js"></script>
-    
+
     <script>
-      const nameInput = document.getElementById('form-name');
-      const emailInput = document.getElementById('form-email');
-      const subjectInput = document.getElementById('form-subject');
-      const messageInput = document.getElementById('form-message');
-      const submitForm = document.getElementById('contact-form');
-      const contact = document.getElementById('contact');
-      
-      submitForm.addEventListener('submit', async (e) => {
+      const nameInput = document.getElementById("form-name");
+      const emailInput = document.getElementById("form-email");
+      const subjectInput = document.getElementById("form-subject");
+      const messageInput = document.getElementById("form-message");
+      const submitForm = document.getElementById("contact-form");
+      const contact = document.getElementById("contact");
+
+      submitForm.addEventListener("submit", async (e) => {
         e.preventDefault();
-        console.log('clicked');
-    
+        console.log("clicked");
+
         try {
           await Email.send({
             SecureToken: "dc8e6503-b200-4136-9731-2478828ca348",
             To: "dvazdev@gmail.com",
             From: "info@danielvazquez.dev",
             Subject: subjectInput.value,
-            Body: 'Name: ' + nameInput.value + ' ' + 'Email: ' + emailInput.value + ' ' + 'Message: ' + messageInput.value
+            Body:
+              "Name: " +
+              nameInput.value +
+              " " +
+              "Email: " +
+              emailInput.value +
+              " " +
+              "Message: " +
+              messageInput.value,
           });
-    
-          const confirmation = confirm('Message Received!');
+
+          const confirmation = confirm("Message Received!");
           if (confirmation) {
-        contact.style.display = 'none';
-      }
+            contact.style.display = "none";
+          }
         } catch (error) {
-          console.error('Error sending email:', error);
-          alert('Failed to send email.');
+          console.error("Error sending email:", error);
+          alert("Failed to send email.");
         }
       });
     </script>
-    
   </body>
 </html>
