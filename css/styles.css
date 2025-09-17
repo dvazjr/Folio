@@ -129,11 +129,11 @@
 }
 
 .navbar-nav .main-menu {
-margin: 0;
-padding-right: 1rem;
-display: flex;
-gap: 1rem;
-list-style-type: none;
+  margin: 0;
+  padding-right: 1rem;
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
 }
 
 .navbar-nav .nav-item {
@@ -244,11 +244,16 @@ list-style-type: none;
 }
 
 .modal-body .img-wrapper {
-  max-width: 300px;
+  max-width: 360px;
   margin-right: 0.75rem;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
 }
 .modal-body .img-wrapper img {
-  height: 150px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #about .img-wrapper img,
@@ -265,7 +270,6 @@ list-style-type: none;
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 }
 .contact-me .email {
-  
   font-size: 1.4rem;
   text-transform: lowercase;
 }
@@ -337,13 +341,18 @@ list-style-type: none;
 }
 
 .card-body {
-  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.3)
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+  /* Use aspect-ratio so cards scale with their width while preserving shape */
+  aspect-ratio: 4 / 3; /* default ratio; adjust as needed */
+  overflow: hidden;
+  display: block;
 }
 
 .card-body img {
   width: 100%;
-  height: 255px;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .card-popup-box {
@@ -399,7 +408,13 @@ list-style-type: none;
 .top-footer {
   display: flex;
   justify-content: center;
-  background: linear-gradient(45deg, rgb(255 255 255 / 10%), rgb(0, 0, 0, 10%), rgba(255, 255, 255, 0.1));}
+  background: linear-gradient(
+    45deg,
+    rgb(255 255 255 / 10%),
+    rgb(0, 0, 0, 10%),
+    rgba(255, 255, 255, 0.1)
+  );
+}
 .top-footer > div > a {
   font-size: 12px;
   padding-left: 1rem;
@@ -407,7 +422,7 @@ list-style-type: none;
 }
 
 .top-footer > div > span,
-.top-footer > .social-icons > ul > li > a{
+.top-footer > .social-icons > ul > li > a {
   color: var(--color-text);
 }
 
@@ -485,8 +500,29 @@ list-style-type: none;
   }
 }
 
-@keyframes header-lg{0%{letter-spacing:2rem;opacity:0}50%{opacity:.4}100%{letter-spacing:normal;opacity:1}}
-@keyframes sub-header{0%{transform:translateZ(-80px);opacity:0}100%{transform:translateZ(0);opacity:1}}
+@keyframes header-lg {
+  0% {
+    letter-spacing: 2rem;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes sub-header {
+  0% {
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
 
 @keyframes about {
   0% {
