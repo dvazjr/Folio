@@ -509,8 +509,9 @@
     opacity: 0.4;
   }
   100% {
-    letter-spacing: normal;
+    letter-spacing: -0.4rem;
     opacity: 1;
+    text-transform: uppercase;
   }
 }
 @keyframes sub-header {
